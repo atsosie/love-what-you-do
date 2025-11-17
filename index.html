@@ -5,20 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Love What You Do | Management Consulting Firm in Vancouver</title>
   <link rel="icon" type="image/png" href="/images/favicon.png"/>
-  <link href="styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="nav-script.js"></script>
 </head>
 <body id="homepage-top">
   <a href="#main-content" class="skip-link link-underline">Skip to main content</a>
   <header class="header">
-    <nav class="nav" aria-label="Main navigation">
-      <div>
-        <img class="logo-image" src="/images/favicon.png" alt="Love What You Do heart logo">
-        <h1 class="logo-title">love what YOU do</h1>
-      </div>
-      <ul class="nav-link-list list-unstyled" role="list">
-        <li><a class="nav-link heading-primary" href="#services">Services</a></li>
-        <li><a class="nav-link heading-primary" href="#about">About</a></li>
-        <li><a class="nav-link heading-primary" href="#contact">Contact</a></li>
+    <div>
+      <img class="logo-image" src="/images/favicon.png" alt="Love What You Do heart logo">
+      <h1 class="logo-title">love what YOU do</h1>
+    </div>
+    <button class="menu-button open-button" aria-label="Open Menu" aria-controls="main-navigation" aria-expanded="false">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" /></svg>
+    </button>
+    <nav id="main-navigation" class="navigation">
+      <button class="menu-button close-button" aria-label="Close Menu">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>
+      </button>
+      <ul class="main-menu">
+        <li class="nav-item"><a href="#services">Services</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
