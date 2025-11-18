@@ -5,24 +5,24 @@
   --breakpoint-tablet-and-above: 768px;
   --color-bg-light: #f2f2f2;
   --color-bg-dark: #232323;
-  /* --color-text-primary: #232323; */
   --color-text-primary: #343434;
   --color-black: #000000;
   --color-white: #fafafa;
   --color-grey-light: #c0c0c0;
   --color-grey-medium: #757575;
   --color-grey-dark: #4d4d4d;
-  --color-blue-light: #0096d5; /*not OK as text on white*/
-  --color-blue-medium: #005499; /*for links/buttons*/
+  --color-blue-light: #0096d5;
+  --color-blue-medium: #005499;
   --color-blue-dark: #203A72;
-  --color-pink-light: #eb0085; /*not OK as text on white*/
-  --color-pink-medium: #be2070; /*only OK as large text on white*/
+  --color-pink-light: #eb0085;
+  --color-pink-medium: #be2070; /* use for links/buttons on light background*/
   --color-pink-dark: #751c53;
   --color-green-light: #bed630;
   --color-green-medium: #42a655;
   --color-green-dark: #255f36;
   --color-orange: #e87725;
   --text-size-body: 18px;
+  --text-size-small: 16px;
   --text-size-medium: 1.25rem;
   --text-size-large: 1.5rem;
   --text-size-xlarge: 1.75rem;
@@ -52,7 +52,7 @@ body {
 }
 
 p {
-  line-height: 1.75;
+  line-height: 1.5;
   max-width: 75ch;
   text-wrap: pretty;
 }
@@ -61,16 +61,22 @@ p + p {
   margin-top: 1.5rem;
 }
 
+p + .heading-primary {
+  margin-top: 2rem;
+}
+
 .heading-primary {
-  font-size: var(--text-size-medium);
-  font-weight: 600;
-  letter-spacing: 0.125rem;
+  font-size: var(--text-size-xlarge);
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 .heading-secondary {
   font-size: var(--text-size-medium);
   font-weight: 700;
+  letter-spacing: 0.0125rem;
 }
 
 .list-unstyled {
@@ -152,9 +158,13 @@ p + p {
   color: var(--color-black);
   display: inline;
   font-size: var(--text-size-medium);
-  font-weight: 700;
-  letter-spacing: 0.05rem;
+  font-weight: 600;
+  letter-spacing: 0.0125rem;
   vertical-align: middle;
+}
+
+.logo-title-bold {
+  text-transform: uppercase;
 }
 
 .header {
@@ -163,7 +173,7 @@ p + p {
 	box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.1);
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 5vw;
+  padding: 0.5rem 4vw;
 	position: sticky;
 	top: 0;
   z-index: 9999;
@@ -180,6 +190,10 @@ p + p {
 }
 
 .nav-item a {
+  font-size: var(--text-size-medium);
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
 	display: block;
 	padding: 0.5rem;
 	text-decoration-color: transparent;
@@ -192,8 +206,8 @@ p + p {
 .nav-item a:focus,
 .nav-item a:hover,
 .nav-item a:active {
-	color: var(--color-blue-medium);
-	text-decoration-color: var(--color-blue-medium);
+	color: var(--color-pink-medium);
+	text-decoration-color: var(--color-pink-medium);
 }
 
 .menu-button {
@@ -221,7 +235,7 @@ svg {
 	.menu-button:focus,
 	.menu-button:hover,
 	.menu-button:active {
-		background-color: var(--color-blue-medium);
+		background-color: var(--color-pink-medium);
 	}
 
 	.menu-button:focus svg,
@@ -280,19 +294,20 @@ svg {
 /* end Navigation */
 
 .centered-wrapper {
-  max-width: 50rem;
+  max-width: 75ch;
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 4vw;
 }
 
 .section {
-  margin-block: 2.5rem;
+  margin-top: 120px;
+  scroll-margin-top: 76px;
 }
 
 .diagonal {
   --skew-angle: -7deg;
   isolation: isolate;
-  margin-block: 5rem;
+  margin-block: 4rem;
   padding-block: 2rem;
   position: relative;
 }
@@ -310,8 +325,8 @@ svg {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 @media (min-width: 768px) {
@@ -322,14 +337,15 @@ svg {
 
 @media (min-width: 1050px) {
   .grid-3-columns {
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-left: 16vw;
+    padding-right: 16vw;
   }
 }
 
 .services-card {
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: var(--text-size-small);
   padding: 2rem;
   text-align: left;
 }
@@ -347,7 +363,7 @@ svg {
 
 .about-bio {
   background-color: var(--color-bg-dark);
-  padding: 2rem 5vw;
+  padding: 2rem 4vw;
 }
 
 .bio-container {
@@ -361,10 +377,10 @@ svg {
   }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1250px) {
   .about-bio {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 16vw;
+    padding-right: 16vw;
   }
 }
 
@@ -376,11 +392,7 @@ svg {
 
 .bio-title {
   color: var(--color-grey-light);
-  font-size: var(--text-size-xlarge);
-  font-weight: 700;
-  letter-spacing: 0.25rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 .bio-subtitle {
@@ -405,5 +417,5 @@ svg {
 }
 
 .footer {
-  padding: 2rem 5vw;
+  padding: 2rem 4vw;
 }
