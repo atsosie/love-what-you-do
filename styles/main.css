@@ -4,11 +4,14 @@
   --breakpoint-desktop-and-above: 1050px;
   --breakpoint-tablet-and-above: 768px;
   --color-bg-light: #f2f2f2;
-  --color-text-primary: #232323;
+  --color-bg-dark: #232323;
+  /* --color-text-primary: #232323; */
+  --color-text-primary: #343434;
+  --color-black: #000000;
   --color-white: #fafafa;
   --color-grey-light: #c0c0c0;
   --color-grey-medium: #757575;
-  --color-grey-dark: #343434;
+  --color-grey-dark: #4d4d4d;
   --color-blue-light: #0096d5; /*not OK as text on white*/
   --color-blue-medium: #005499; /*for links/buttons*/
   --color-blue-dark: #203A72;
@@ -60,7 +63,7 @@ p + p {
 
 .heading-primary {
   font-size: var(--text-size-medium);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
 }
@@ -135,17 +138,18 @@ p + p {
 /* Navigation */
 .logo-wrapper {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
 }
 
 .logo-image {
-  height: 40px;
+  height: 50px;
   width: auto;
   vertical-align: middle;
 }
 
 .logo-title {
+  color: var(--color-black);
   display: inline;
   font-size: var(--text-size-medium);
   font-weight: 700;
@@ -181,7 +185,7 @@ p + p {
 	text-decoration-color: transparent;
 	text-decoration-thickness: 3px;
 	text-underline-offset: 10px;
-	color: var(--color-text-primary);
+	color: var(--color-grey-dark);
 	transition: all 300ms ease-in-out;
 }
 
@@ -211,7 +215,6 @@ svg {
 @media (max-width: 768px) {
 	.menu-button {
 		display: block;
-		border-radius: 5px;
 		transition: background-color 300ms ease-in-out;
 	}
 
@@ -331,8 +334,19 @@ svg {
   text-align: left;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .services-card {
+    box-shadow: 0 4px 24px 0 rgba(55, 55, 65, 0.1);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .services-card:hover, .services-card:focus-within {
+    box-shadow: 0 8px 32px 0 rgba(30, 58, 95, 0.75);
+    border-color: var(--color-blue-light);
+  }
+}
+
 .about-bio {
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-bg-dark);
   padding: 2rem 5vw;
 }
 
@@ -379,11 +393,17 @@ svg {
 
 .bio-text {
   color: var(--color-bg-light);
-  padding: 2rem;
+  padding-block: 2rem;
+}
+
+@media (min-width: 768px) {
+  .bio-text {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 2rem;
+  }
 }
 
 .footer {
-  background-color: var(--color-text-primary);
-  color: var(--color-bg-light);
   padding: 2rem 5vw;
 }
