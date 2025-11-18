@@ -110,15 +110,26 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="section centered-wrapper">
+    <section id="contact" class="contact section centered-wrapper">
+      <h2 class="heading-primary">Contact Us</h2>
       <p>Our team of experienced human resources professionals are ready to support your people strategies to help you achieve your business goals.</p>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="b86139ba-0628-4222-a0ab-2cf6c634212d">
+        <label for="name" class="form-label">Name:</label>
+        <input id="name" type="text" name="name" autocomplete="off" required>
+        <label for="email" class="form-label">Email:</label>
+        <input id="email" type="email" name="email" autocomplete="off" required>
+        <label for="message" class="form-label">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="button">Submit</button>
+      </form>
     </section>
   </main>
   <footer class="footer section">
     <!-- <ul class="list-unstyled footer-link-list">
       <li><a class="footer-link link-underline" href="/policy-privacy.html">Privacy Policy</a></li>
     </ul> -->
-    <p class="footer-copyright">Copyright 2025 Love What You Do.</p>
+    <p class="footer-copyright">Copyright 2025 Love What You Do</p>
   </footer>
 </body>
 </html>
