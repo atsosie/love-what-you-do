@@ -66,11 +66,17 @@ p + .heading-primary {
 }
 
 .heading-primary {
-  font-size: var(--text-size-xlarge);
-  font-weight: 800;
-  letter-spacing: 0.25rem;
+  font-size: var(--text-size-large);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .heading-primary {
+    font-size: var(--text-size-xlarge);
+  }
 }
 
 .heading-secondary {
@@ -142,14 +148,9 @@ p + .heading-primary {
 }
 
 /* Navigation */
-.logo-wrapper {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 
 .logo-image {
-  height: 50px;
+  height: 75px;
   width: auto;
   vertical-align: middle;
 }
@@ -301,7 +302,7 @@ svg {
 
 .section {
   margin-top: 120px;
-  scroll-margin-top: 76px;
+  scroll-margin-top: 100px;
 }
 
 .diagonal {
@@ -445,7 +446,7 @@ svg {
 input[type="text"],
 input[type="email"],
 textarea {
-  background-color: var(--color-white);
+  background-color: #ffffff;
   border: none;
   padding: 0.5rem;
   font-family: 'Figtree', sans-serif;
@@ -455,7 +456,7 @@ textarea {
 .button {
   padding: 1rem 2rem;
   background-color: var(--color-pink-medium);
-  color: var(--color-white);
+  color: var(--color-bg-light);
   border: none;
   cursor: pointer;
   font-size: var(--text-size-medium);
