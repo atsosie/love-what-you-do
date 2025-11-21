@@ -12,8 +12,11 @@
 </head>
 <body id="homepage-top">
   <a href="#main-content" class="skip-link link-underline">Skip to main content</a>
-  <header class="header">
-    <img class="logo-image" src="images/love-what-you-do-logo-with-text.png" alt="Love What You Do logo">
+  <header class="header centered-wrapper-outer flex-space-between">
+    <div class="logo-wrapper">
+      <img class="logo-image" src="images/favicon.png" alt="Love What You Do heart logo">
+      <h1 class="logo-title">love what <span class="logo-title-bold">you</span> do</h1>
+    </div>
     <button class="menu-button open-button" aria-label="Open Menu" aria-controls="main-navigation" aria-expanded="false">
       <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" /></svg>
     </button>
@@ -29,19 +32,24 @@
     </nav>
   </header>
   <main id="main-content">
-    <section class="intro section">
-      <p class="centered-wrapper">add intro/hero section</p>
+    <section class="intro centered-wrapper-outer">
+      <p class="intro-title">Aligning People.</p>
+      <p class="intro-title">Driving Strategy.</p>
+      <p class="intro-title">Cultivating Growth.</p>
+      <p class="intro-subtitle">We offer HR support to help you and your people love what you do.</p>
+      <a class="button" href="#contact">Talk to an expert</a>
     </section>
     <section id="services" class="section">
-      <div class="centered-wrapper">
+      <div class="centered-wrapper-inner">
         <h2 class="heading-primary">Our Services</h2>
         <p>We provide more than just services. We build partnerships to create sustainable growth and a positive workplace culture, supporting our clients and ensuring their people "love what they do".</p>
       </div>
         <div class="diagonal">
-        <div class="grid-3-columns">
+        <div class="grid-3-columns centered-wrapper-outer">
           <div class="services-card">
-            <h3 class="heading-secondary">People & Culture Solutions</h2>
+            <h3 class="heading-tertiary">People & Culture Solutions</h2>
               <ul class="list-bulleted">
+                <li>Fractional Human Resources</li>
                 <li>Talent Acquisition</li>
                 <li>Talent Management</li>
                 <li>Executive Search</li>
@@ -52,11 +60,10 @@
                 <li>Compliance</li>
                 <li>Organizational Development</li>
                 <li>Training & Development</li>
-                <li>Fractional Human Resources</li>
               </ul>
           </div>
           <div class="services-card">
-            <h3 class="heading-secondary">Business Strategy & Advisory</h2>
+            <h3 class="heading-tertiary">Business Strategy & Advisory</h2>
               <ul class="list-bulleted">
                 <li>Organizational Planning & Design</li>
                 <li>Mergers & Acquisitions</li>
@@ -74,7 +81,7 @@
               </ul>
           </div>
           <div class="services-card">
-            <h3 class="heading-secondary">Career Development</h2>
+            <h3 class="heading-tertiary">Career Development</h2>
               <ul class="list-bulleted">
                 <li>Outplacement Services</li>
                 <li>Resume Design & Writing</li>
@@ -85,25 +92,21 @@
       </div>
     </section>
     <section id="about" class="section">
-      <div class="centered-wrapper">
-        <h2 class="heading-primary">Our Mission</h2>
-        <p>Aligning People. Driving Strategy. Cultivating Growth.</p>
+      <div class="centered-wrapper-inner">
+        <h2 id="mission" class="heading-primary">Our Mission</h2>
         <p>Love What You Do is a management consulting firm dedicated to helping businesses thrive by empowering them to manage their workforce efficiently and strategically.</p>
-        <p>With our full suite of services, we can offer solutions tailored to your company's unique needs across various industries. Our expertise spans talent acquisition, employee engagement, compensation and benefits design, compliance, and organizational development.</p>
+        <p>With our full suite of services, the team at Love What You Do can offer solutions tailored to your company's unique needs across various industries. Our expertise spans talent acquisition, employee engagement, compensation and benefits design, compliance, and organizational development.</p>
         <p>We are passionate about aligning people strategies with business goals, ensuring our clients have the resources and insights to foster a productive, compliant, and engaged workforce. Whether you're an entrepreneurial startup or a Fortune 500 company, we bring a personalized approach to help your business navigate complex HR challenges and stay competitive in a rapidly changing market.</p>
-        <h2 class="heading-primary">Our Approach</h2>
+        <h2 id="approach" class="heading-primary">Our Approach</h2>
         <p>At Love What You Do, we align people with business strategy to drive sustainable growth and a thriving workplace culture. Through strategic HR consulting, effective communication, and careful execution, we help organizations attract, develop, and retain top talent while fostering a culture that supports business objectives.</p>
         <p>Our approach ensures that every HR initiative is thoughtfully designed and seamlessly implemented, empowering businesses to build high-performing teams and achieve long-term success.</p>
       </div>
-      <div class="about-bio section">
+      <div id="expert" class="about-bio section centered-wrapper-outer">
         <div class="bio-container">
           <img class="bio-image" src="images/NH.jpg" alt="Photo of Nancy Ho">
           <div class="bio-text">
-            <h3 class="heading-primary bio-title">Nancy Ho</h3>
-            <h4 class="bio-subtitle">Managing Principal</h4>
-            <a class="social-icon" href="https://www.linkedin.com/in/nancymho/" target="_blank" rel="noopener">
-              <img src="images/linkedin-logo.png" alt="">
-            </a>
+            <h2 class="heading-primary bio-title">Nancy Ho</h2>
+            <h3 class="heading-secondary">Managing Principal</h3>
             <p>With over 25 years of experience, Nancy fosters workplaces where diversity, equity, inclusion, and belonging are integral to business culture. A proven leader in people development, Nancy cultivates high-performance environments and navigates rapid growth with practical, creative solutions. Her expertise drives organizational success and enhances employee engagement.</p>
             <p>Beyond her HR leadership, Nancy is also a professional stand-up comedian who has performed at corporate events and served as a host, emcee, and keynote speaker, bringing energy, humour, and engagement to professional functions.</p>
             <p>Nancy holds a Bachelor of Arts in Applied Communication from Simon Fraser University and a Master of Business Administration in Human Resources Management from Royal Roads University.</p>
@@ -111,7 +114,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="contact section centered-wrapper">
+    <section id="contact" class="contact section centered-wrapper-inner">
       <h2 class="heading-primary">Contact Us</h2>
       <p>Our team of experienced human resources professionals are ready to support your people strategies to help you achieve your business goals.</p>
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
@@ -122,15 +125,28 @@
         <input id="email" type="email" name="email" autocomplete="off" required>
         <label for="message" class="form-label">Message:</label>
         <textarea id="message" name="message" required></textarea>
-        <button type="submit" class="button">Submit</button>
+        <button type="submit" class="button">Send</button>
       </form>
     </section>
   </main>
-  <footer class="footer section">
-    <!-- <ul class="list-unstyled footer-link-list">
-      <li><a class="footer-link link-underline" href="/policy-privacy.html">Privacy Policy</a></li>
-    </ul> -->
-    <p class="footer-copyright">Copyright 2025 Love What You Do</p>
+  <footer class="footer section centered-wrapper-outer grid-3-columns">
+    <div>
+      <p>Copyright 2025 Love What You Do</p>
+    </div>
+    <div>
+    <h2>About us</h2>
+      <a href="/policy-privacy.html">Privacy Policy</a>
+      <a href="#services">Our Services</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#team">Our Expert</a>
+    </div>
+    <div>
+      <h2>Connect with us:</h2>
+      <a class="social-icon" href="https://www.linkedin.com/in/nancymho/" target="_blank" rel="noopener">
+        <img src="images/linkedin-logo.png" alt="">
+      </a>
+    </div>
   </footer>
 </body>
 </html>

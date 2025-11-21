@@ -1,13 +1,15 @@
 /* Custom stylesheet by Rigel Software Inc. for lovewhatyoudo.ca */
-
+/*
+breakpoint-desktop-and-above: 1050px
+breakpoint-tablet-and-above: 768px
+*/
 :root {
-  --breakpoint-desktop-and-above: 1050px;
-  --breakpoint-tablet-and-above: 768px;
   --color-bg-light: #f2f2f2;
   --color-bg-dark: #232323;
   --color-text-primary: #343434;
   --color-black: #000000;
-  --color-white: #fafafa;
+  --color-white: #ffffff;
+  --color-off-white: #fafafa;
   --color-grey-light: #c0c0c0;
   --color-grey-medium: #757575;
   --color-grey-dark: #4d4d4d;
@@ -27,6 +29,8 @@
   --text-size-large: 1.5rem;
   --text-size-xlarge: 1.75rem;
 }
+
+/* --- Global Styles --- */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -80,6 +84,14 @@ p + .heading-primary {
 }
 
 .heading-secondary {
+  font-size: var(--text-size-large);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading-tertiary {
   font-size: var(--text-size-medium);
   font-weight: 700;
   letter-spacing: 0.0125rem;
@@ -100,6 +112,28 @@ p + .heading-primary {
 
 .list-bulleted li {
   line-height: 1.5;
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: var(--color-pink-medium);
+  color: var(--color-bg-light);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--text-size-medium);
+  font-weight: 600;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: var(--color-pink-dark);
 }
 
 /* Nested list */
@@ -123,8 +157,9 @@ p + .heading-primary {
 }
 
 .skip-link {
-  background: #dcdee5;
-  font-weight: 900;
+  background: var(--color-bg-dark);
+  color: var(--color-bg-light); 
+  font-weight: 600;
   height: 1px;
   position: absolute;
   left: -999px;
@@ -141,16 +176,40 @@ p + .heading-primary {
   height: auto;
   left: 1rem;
   right: 1rem;
-  outline: 2px solid #915865;
+  outline: 2px solid var(--color-pink-medium);
   padding: 2em;
   top: 1rem;
   width: auto;
 }
 
-/* Navigation */
+.centered-wrapper-outer {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+@media (min-width: 1250px) {
+  .centered-wrapper-outer {
+    padding-left: 16vw;
+    padding-right: 16vw;
+  }
+}
+
+.centered-wrapper-inner {
+  max-width: 75ch;
+  margin-inline: auto;
+  padding-inline: 4vw;
+}
+
+/* --- Navigation --- */
+
+.logo-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
 .logo-image {
-  height: 75px;
+  height: 50px;
   width: auto;
   vertical-align: middle;
 }
@@ -158,9 +217,9 @@ p + .heading-primary {
 .logo-title {
   color: var(--color-black);
   display: inline;
-  font-size: var(--text-size-medium);
-  font-weight: 600;
-  letter-spacing: 0.0125rem;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: var(--text-size-large);
+  font-weight: normal;
   vertical-align: middle;
 }
 
@@ -168,13 +227,17 @@ p + .heading-primary {
   text-transform: uppercase;
 }
 
-.header {
+.flex-space-between {
   align-items: center;
-  background-color: var(--color-white);
-	box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.1);
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 4vw;
+}
+
+.header {
+  background-color: var(--color-off-white);
+	box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.1);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 	position: sticky;
 	top: 0;
   z-index: 9999;
@@ -242,7 +305,7 @@ svg {
 	.menu-button:focus svg,
 	.menu-button:hover svg,
 	.menu-button:active svg {
-		stroke: var(--color-white);
+		stroke: var(--color-off-white);
 	}
 
 	.close-button {
@@ -269,7 +332,7 @@ svg {
 		width: 200px;
 		height: 100vh;
 		box-shadow: 0 0 0 0;
-		background-color: var(--color-white);
+		background-color: var(--color-off-white);
 		transform: translateX(0);
 		transition: transform 200ms ease-in-out;
 	}
@@ -292,12 +355,25 @@ svg {
 	}
 }
 
-/* end Navigation */
+/* --- Main Content --- */
 
-.centered-wrapper {
-  max-width: 75ch;
-  margin-inline: auto;
-  padding-inline: 4vw;
+.intro {
+  background-color: var(--color-white);
+  font-size: var(--text-size-xlarge);
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+}
+
+.intro-title {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.125rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.intro-subtitle {
+  font-size: var(--text-size-large);
 }
 
 .section {
@@ -326,8 +402,6 @@ svg {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding-left: 4vw;
-  padding-right: 4vw;
 }
 
 @media (min-width: 768px) {
@@ -336,15 +410,8 @@ svg {
   }
 }
 
-@media (min-width: 1050px) {
-  .grid-3-columns {
-    padding-left: 16vw;
-    padding-right: 16vw;
-  }
-}
-
 .services-card {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-size: var(--text-size-small);
   padding: 2rem;
@@ -364,7 +431,8 @@ svg {
 
 .about-bio {
   background-color: var(--color-bg-dark);
-  padding: 2rem 4vw;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .bio-container {
@@ -378,13 +446,6 @@ svg {
   }
 }
 
-@media (min-width: 1250px) {
-  .about-bio {
-    padding-left: 16vw;
-    padding-right: 16vw;
-  }
-}
-
 .bio-image {
   width: 100%;
   height: 100%;
@@ -394,14 +455,6 @@ svg {
 .bio-title {
   color: var(--color-grey-light);
   margin-bottom: 0.5rem;
-}
-
-.bio-subtitle {
-  font-size: var(--text-size-large);
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: 0.125rem;
-  margin-bottom: 1.5rem;
 }
 
 .bio-text {
@@ -446,34 +499,16 @@ svg {
 input[type="text"],
 input[type="email"],
 textarea {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border: none;
   padding: 0.5rem;
   font-family: 'Figtree', sans-serif;
   font-size: var(--text-size-body);
 }
 
-.button {
-  padding: 1rem 2rem;
-  background-color: var(--color-pink-medium);
-  color: var(--color-bg-light);
-  border: none;
-  cursor: pointer;
-  font-size: var(--text-size-medium);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
-  transition: background-color 200ms ease-in-out;
-}
-
-.button:hover,
-.button:active,
-.button:focus {
-  background-color: var(--color-pink-dark);
-}
-
 .footer {
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-grey-medium);
   color: var(--color-bg-light);
-  padding: 4rem 4vw;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
