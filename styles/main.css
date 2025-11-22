@@ -54,7 +54,6 @@ body {
 
 p {
   line-height: 1.5;
-  max-width: 75ch;
   text-wrap: pretty;
 }
 
@@ -72,17 +71,11 @@ p + .heading-tertiary,
 }
 
 .heading-primary {
-  font-size: var(--text-size-large);
+  font-size: clamp(var(--text-size-large), 1.4167rem + 0.381vw, var(--text-size-xlarge));
   font-weight: 700;
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .heading-primary {
-    font-size: var(--text-size-xlarge);
-  }
 }
 
 .heading-secondary {
@@ -124,7 +117,7 @@ p + .heading-tertiary,
   border: none;
   cursor: pointer;
   display: inline-block;
-  font-size: var(--text-size-medium);
+  font-size: var(--text-size-body);
   font-weight: 600;
   margin-top: 2rem;
   text-transform: uppercase;
@@ -213,7 +206,7 @@ p + .heading-tertiary,
 }
 
 .centered-wrapper-inner {
-  max-width: 75ch;
+  max-width: 66ch;
   margin-inline: auto;
   padding-inline: 4vw;
 }
@@ -386,7 +379,7 @@ svg {
 }
 
 .intro-title {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 1rem + 3.4286vw, 4rem);
   font-weight: 900;
   letter-spacing: 0.0125rem;
   line-height: normal;
@@ -394,22 +387,9 @@ svg {
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
-  .intro-title {
-    font-size: 4rem;
-    letter-spacing: 0.125rem;
-  }
-}
-
 .intro-subtitle {
-  font-size: var(--text-size-medium);
+  font-size: clamp(1rem, 0.8333rem + 0.7619vw, 1.5rem);
   margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-  .intro-subtitle {
-    font-size: var(--text-size-large);
-  }
 }
 
 .section {
