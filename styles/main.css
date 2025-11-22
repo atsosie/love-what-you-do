@@ -221,7 +221,7 @@ p + .heading-primary {
 }
 
 .logo-image {
-  height: 50px;
+  height: 44px;
   width: auto;
   vertical-align: middle;
 }
@@ -231,7 +231,7 @@ p + .heading-primary {
   display: inline;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-size: var(--text-size-large);
-  font-weight: normal;
+  font-weight: 300;
   vertical-align: middle;
 }
 
@@ -583,12 +583,14 @@ textarea {
 .footer-logo-title {
   color: var(--color-black);
   font-family: 'Fira Sans Extra Condensed', sans-serif;
-  font-size: clamp(1rem, 2vw + 1.5rem, 4rem);
+  font-weight: 300;
+  font-size: clamp(var(--text-size-body), 2vw + 1.5rem, 4rem);
   letter-spacing: -1px;
 }
 
 .footer-logo-subtitle {
-  font-size: clamp(1rem, 1vw + 0.5rem, 2rem);
+  color: var(--color-grey-dark);
+  font-size: clamp(var(--text-size-small), 1vw + 0.5rem, 1.25rem);
   margin-top: 0.5rem;
 }
 
@@ -612,6 +614,10 @@ textarea {
   height: 20px;
   width: auto;
   vertical-align: baseline;
+}
+
+.social-image:hover, .social-image:focus, .social-image:active {
+  filter: brightness(0.8);
 }
 
 .footer-copyright {
