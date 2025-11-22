@@ -62,7 +62,12 @@ p + p {
   margin-top: 1.5rem;
 }
 
-p + .heading-primary {
+p + .heading-primary,
+p + .heading-secondary,
+p + .heading-tertiary,
+.list-bulleted + .heading-primary,
+.list-bulleted + .heading-secondary,
+.list-bulleted + .heading-tertiary {
   margin-top: 2rem;
 }
 
@@ -92,6 +97,7 @@ p + .heading-primary {
   font-size: var(--text-size-medium);
   font-weight: 700;
   letter-spacing: 0.0125rem;
+  margin-bottom: 1rem;
 }
 
 .list-unstyled {
@@ -103,8 +109,8 @@ p + .heading-primary {
   flex-direction: column;
   gap: 0.5rem;
   list-style: disc;
-  margin-inline-start: 1rem;
-  margin-top: 1rem;
+  margin-inline-start: 2rem;
+  margin-top: 0.5rem;
 }
 
 .list-bulleted li {
@@ -134,10 +140,10 @@ p + .heading-primary {
 }
 
 .link-primary {
-  text-decoration-color: transparent;
+  text-decoration-color: var(--color-pink-medium);
 	text-decoration-thickness: 2px;
 	text-underline-offset: 6px;
-	color: var(--color-grey-dark);
+	color: var(--color-text-primary);
 	transition: all 200ms ease-in-out;
 }
 
@@ -145,7 +151,7 @@ p + .heading-primary {
 .link-primary:hover,
 .link-primary:active {
 	color: var(--color-pink-medium);
-	text-decoration-color: var(--color-pink-medium);
+	text-decoration-color: var(--color-pink-dark);
 }
 
 /* Nested list */
@@ -467,6 +473,10 @@ svg {
   }
 }
 
+.services-list {
+  margin-inline-start: 1rem;
+}
+
 .about-bio {
   background-color: var(--color-bg-dark);
   padding-bottom: 4rem;
@@ -608,6 +618,10 @@ textarea {
   .footer-links {
     flex-direction: row;
   }
+}
+
+a.footer-link {
+  text-decoration-color: transparent;
 }
 
 .social-image {
