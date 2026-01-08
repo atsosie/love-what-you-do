@@ -211,6 +211,27 @@ p + .heading-tertiary,
   padding-inline: 4vw;
 }
 
+/* --- Grid --- */
+.grid-12-columns {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.center-column {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .grid-12-columns {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .center-column {
+    grid-column: 4 / span 6;
+  }
+}
+
 /* --- Navigation --- */
 
 .logo-wrapper {
@@ -424,15 +445,13 @@ svg {
   z-index: -1;
 }
 
-.grid-3-columns {
-  display: grid;
+.services-card-grid {
   grid-template-columns: minmax(auto, max-content);
-  gap: 2rem;
   justify-content: center;
 }
 
 @media (min-width: 1024px) {
-  .grid-3-columns {
+  .services-card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -467,21 +486,17 @@ svg {
   padding-top: 4rem;
 }
 
-.bio-container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .bio-container {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
 .bio-image {
-  width: 100%;
+  grid-column: 1 / -1;
   height: 100%;
+  width: 100%;
   object-fit: cover;
+}
+
+.bio-text {
+  color: var(--color-bg-light);
+  grid-column: 1 / -1;
+  padding-block: 2rem;
 }
 
 .bio-title {
@@ -489,16 +504,20 @@ svg {
   margin-bottom: 0.5rem;
 }
 
-.bio-text {
-  color: var(--color-bg-light);
-  padding-block: 2rem;
+.bio-subtitle {
+  color: var(--color-grey-medium);
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
+  .bio-image {
+    grid-column: 1 / span 4;
+  }
+
   .bio-text {
+    grid-column: 5 / span 8;
     padding-bottom: 0;
     padding-top: 0;
-    padding-left: 2rem;
   }
 }
 
@@ -639,16 +658,20 @@ a.footer-link {
   }
 }
 
-.feature-container {
+.grid-3-columns {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 
 @media (min-width: 768px) {
-  .feature-container {
+  .grid-3-columns {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.feature-header {
+  grid-column: 1 / span 4;
 }
 
 .feature-subtitle {
@@ -662,6 +685,6 @@ a.footer-link {
 }
 
 .feature-body {
-  grid-column: span 2;
-  max-width: 52ch;
+  grid-column: 5 / span 8;
+  /* max-width: 52ch; */
 }
