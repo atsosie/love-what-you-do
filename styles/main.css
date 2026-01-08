@@ -205,12 +205,6 @@ p + .heading-tertiary,
   }
 }
 
-.centered-wrapper-inner {
-  max-width: 66ch;
-  margin-inline: auto;
-  padding-inline: 4vw;
-}
-
 /* --- Grid --- */
 .grid-12-columns {
   display: grid;
@@ -500,12 +494,11 @@ svg {
 }
 
 .bio-title {
-  color: var(--color-grey-light);
   margin-bottom: 0.5rem;
 }
 
 .bio-subtitle {
-  color: var(--color-grey-medium);
+  color: var(--color-grey-light);
   margin-top: 0;
 }
 
@@ -655,18 +648,6 @@ a.footer-link {
 @media (min-width: 768px) {
   .feature {
     padding-block: 8rem;
-  }
-}
-
-.grid-3-columns {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .grid-3-columns {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
