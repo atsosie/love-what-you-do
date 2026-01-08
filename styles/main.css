@@ -413,7 +413,7 @@ svg {
 }
 
 .intro-subtitle {
-  font-size: var(--text-size-medium);
+  font-size: clamp(var(--text-size-body), 0.9244rem + 0.3721vw, var(--text-size-medium));
   margin-top: 2rem;
 }
 
@@ -455,11 +455,6 @@ svg {
 .feature-title {
   font-size: var(--text-size-large);
   font-weight: 900;
-}
-
-.feature-subtitle {
-  font-size: var(--text-size-medium);
-  font-weight: 700;
 }
 
 .diagonal {
@@ -542,7 +537,7 @@ svg {
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .bio-image {
     grid-column: 1 / span 4;
   }
