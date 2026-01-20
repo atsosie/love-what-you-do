@@ -49,6 +49,7 @@ body {
   color: var(--color-text-primary);
   font-family: 'Figtree', sans-serif;
   font-size: var(--text-size-body);
+  letter-spacing: 0.0125rem;
   overflow-x: hidden;
 }
 
@@ -72,7 +73,7 @@ p + .heading-tertiary,
 
 .heading-primary {
   font-size: clamp(var(--text-size-medium), 1.4167rem + 0.381vw, var(--text-size-large));
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -118,7 +119,7 @@ p + .heading-tertiary,
   cursor: pointer;
   display: inline-block;
   font-size: var(--text-size-body);
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
@@ -170,7 +171,7 @@ p + .heading-tertiary,
 .skip-link {
   background: var(--color-bg-dark);
   color: var(--color-bg-light); 
-  font-weight: 600;
+  font-weight: 700;
   height: 1px;
   position: absolute;
   left: -999px;
@@ -252,6 +253,7 @@ p + .heading-tertiary,
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-size: var(--text-size-medium);
   font-weight: 300;
+  letter-spacing: -0.5px;
   vertical-align: middle;
 }
 
@@ -284,7 +286,7 @@ p + .heading-tertiary,
 
 .nav-item a {
   font-size: var(--text-size-body);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
 	display: block;
@@ -395,7 +397,7 @@ p + .heading-tertiary,
 @media (min-width: 768px) {
   .intro {
     padding-bottom: 8rem;
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
 }
 
@@ -446,7 +448,6 @@ p + .heading-tertiary,
 }
 
 .feature-body {
-  align-self: end;
   grid-column: 1 / -1;
   grid-row: 2;
   margin-top: 1.5rem;
@@ -584,7 +585,7 @@ p + .heading-tertiary,
 
 .form-label {
   color: var(--color-grey-dark);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.025rem;
 }
 
