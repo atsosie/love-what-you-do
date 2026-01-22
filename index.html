@@ -134,12 +134,6 @@
       <div class="centered-column">
         <h2 class="heading-primary">Contact Us</h2>
         <p>Our team of experienced human resources professionals are ready to support your people strategies to help you achieve your business goals.</p>
-        <script>
-          window.onload = function() {
-            // Reset the form fields when the page loads
-            document.getElementById("form").reset();
-          };
-        </script>
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
           <input type="hidden" name="access_key" value="36dabf31-c542-4b15-8ee0-587ece4ec459">
           <input type="hidden" name="from_name" value="Web3Forms">
@@ -187,5 +181,12 @@
       <small>Copyright <time datetime="2025">2025</time> Love What You Do. All rights reserved.</small>
     </div>
   </footer>
+  <script>
+    window.addEventListener("pageshow", function(event) {
+      const form = document.getElementById("form");
+      if (!form) return;
+      form.reset();
+    });
+  </script>
 </body>
 </html>
