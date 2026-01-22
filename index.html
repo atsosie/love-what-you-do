@@ -29,7 +29,7 @@
       <ul class="main-menu">
         <li class="nav-item"><a href="#services">Services</a></li>
         <li class="nav-item"><a href="#about">About</a></li>
-        <li class="hide nav-item"><a href="#contact">Contact</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -39,7 +39,7 @@
       <p class="intro-title">Driving <span class="text-highlighted">strategy</span>.</p>
       <p class="intro-title">Cultivating <span class="text-highlighted">growth</span>.</p>
       <p class="intro-subtitle">We offer HR support to help you and your people love what you do.</p>
-      <a class="hide button" href="#contact">Talk to an expert</a>
+      <a class="button" href="#contact">Talk to an expert</a>
     </section>
     <section class="feature-container centered-wrapper-outer">
       <div class="feature-grid grid-12-columns">
@@ -130,18 +130,27 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="hide section grid-12-columns centered-wrapper-outer">
+    <section id="contact" class="section grid-12-columns centered-wrapper-outer">
       <div class="centered-column">
         <h2 class="heading-primary">Contact Us</h2>
         <p>Our team of experienced human resources professionals are ready to support your people strategies to help you achieve your business goals.</p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-          <input type="hidden" name="access_key" value="b86139ba-0628-4222-a0ab-2cf6c634212d">
+        <script>
+          window.onload = function() {
+            // Reset the form fields when the page loads
+            document.getElementById("form").reset();
+          };
+        </script>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
+          <input type="hidden" name="access_key" value="36dabf31-c542-4b15-8ee0-587ece4ec459">
+          <input type="hidden" name="from_name" value="Web3Forms">
+          <input type="hidden" name="subject" value="New Contact Form Submission">
+          <input type="checkbox" name="botcheck" id="" style="display: none;">
           <label for="name" class="form-label">Name:</label>
           <input id="name" type="text" name="name" autocomplete="name" required>
           <label for="email" class="form-label">Email:</label>
           <input id="email" type="email" name="email" autocomplete="email" required>
           <label for="message" class="form-label">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
           <button type="submit" class="button">Send</button>
         </form>
       </div>
