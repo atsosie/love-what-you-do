@@ -463,6 +463,7 @@ p + .heading-tertiary,
   grid-column: 1 / -1;
   grid-row: 3;
   padding-top: 2rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
