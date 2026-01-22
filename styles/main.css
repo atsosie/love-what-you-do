@@ -632,7 +632,7 @@ textarea {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 275px) {
   .footer-logo {
     grid-template-columns: max-content 3fr;
   }
@@ -651,8 +651,8 @@ textarea {
   color: var(--color-black);
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 300;
-  font-size: clamp(var(--text-size-body), 2vw + 1.5rem, var(--text-size-xlarge));
-  letter-spacing: -1px;
+  font-size: clamp(1.5rem, 0.8182rem + 3.6364vw, var(--text-size-xlarge));
+  letter-spacing: -0.5px;
 }
 
 .footer-logo-subtitle {
