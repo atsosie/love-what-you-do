@@ -112,18 +112,18 @@ p + .heading-tertiary,
 }
 
 .button {
-  padding: 1rem 2rem;
   background-color: var(--color-pink-medium);
-  color: var(--color-bg-light);
   border: none;
+  color: var(--color-bg-light);
   cursor: pointer;
   display: inline-block;
   font-size: var(--text-size-body);
   font-weight: 600;
-  margin-top: 2rem;
-  text-transform: uppercase;
   letter-spacing: 0.125rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
   text-decoration: none;
+  text-transform: uppercase;
   transition: background-color 200ms ease-in-out;
 }
 
@@ -134,10 +134,10 @@ p + .heading-tertiary,
 }
 
 .link-primary {
+  color: var(--color-text-primary);
   text-decoration-color: var(--color-pink-medium);
 	text-decoration-thickness: 2px;
 	text-underline-offset: 6px;
-	color: var(--color-text-primary);
 	transition: all 200ms ease-in-out;
 }
 
@@ -173,12 +173,12 @@ p + .heading-tertiary,
   color: var(--color-bg-light); 
   font-weight: 600;
   height: 1px;
-  position: absolute;
   left: -999px;
   overflow: hidden;
   padding: 1em;
-  top: auto;
+  position: absolute;
   text-align: center;
+  top: auto;
   width: 1px;
   z-index: 10000;
 }
@@ -187,9 +187,9 @@ p + .heading-tertiary,
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   height: auto;
   left: 1rem;
-  right: 1rem;
   outline: 2px solid var(--color-pink-medium);
   padding: 2em;
+  right: 1rem;
   top: 1rem;
   width: auto;
 }
@@ -236,9 +236,9 @@ p + .heading-tertiary,
 /* --- Navigation --- */
 
 .logo-wrapper {
+  align-items: center;
   display: flex;
   gap: 8px;
-  align-items: center;
 }
 
 .logo-image {
@@ -263,38 +263,38 @@ p + .heading-tertiary,
 
 .header {
   align-items: center;
-  display: flex;
-  justify-content: space-between;
   background-color: var(--color-off-white);
 	box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.1);
-  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 	position: sticky;
 	top: 0;
   z-index: 9999;
 }
 
 .main-menu {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   gap: 0.5rem;
+  list-style-type: none;
+  margin: 0;
+	padding: 0;
 }
 
 .nav-item a {
+  color: var(--color-grey-dark);
+  display: block;
   font-size: var(--text-size-body);
   font-weight: 600;
   letter-spacing: 0.125rem;
-  text-transform: uppercase;
-	display: block;
 	padding: 0.5rem;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 3px;
+  text-transform: uppercase;
 	text-underline-offset: 10px;
-	color: var(--color-grey-dark);
 	transition: all 200ms ease-in-out;
 }
 
@@ -306,19 +306,19 @@ p + .heading-tertiary,
 }
 
 .menu-button {
-	display: none;
-	padding: 0;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+  display: none;
+	padding: 0;
 }
 
 .menu-button svg {
 	display: block;
-	width: 3rem;
 	height: 3rem;
   stroke: var(--color-text-primary);
   transition: stroke 200ms ease-in-out;
+  width: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -340,10 +340,10 @@ p + .heading-tertiary,
 	}
 
 	.close-button {
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     margin-left: auto;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
 	}
 
 	.open-button {
@@ -355,24 +355,24 @@ p + .heading-tertiary,
 	}
 
 	.navigation {
-		visibility: hidden;
+    background-color: var(--color-off-white);
+    box-shadow: 0 0 0 0;
+    height: 100vh;
+    left: 100%;
 		opacity: 0;
 		position: fixed;
 		top: 0;
-		left: 100%;
-		width: 200px;
-		height: 100vh;
-		box-shadow: 0 0 0 0;
-		background-color: var(--color-off-white);
-		transform: translateX(0);
+    transform: translateX(0);
 		transition: transform 200ms ease-in-out;
+		visibility: hidden;
+		width: 200px;
 	}
 
 	.menu-active .navigation {
-		visibility: visible;
-		opacity: 1;
 		box-shadow: 0 2px 8px 0 rgba(30, 58, 95, 0.1);
+		opacity: 1;
 		transform: translateX(-100%);
+    visibility: visible;
 	}
 
 	.main-menu {
@@ -514,8 +514,8 @@ p + .heading-tertiary,
 
 .services-card {
   background-color: var(--color-white);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-size: var(--text-size-small);
   padding: 2rem;
   text-align: left;
@@ -545,8 +545,8 @@ p + .heading-tertiary,
 .bio-image {
   grid-column: 1 / -1;
   height: 100%;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .bio-text {
@@ -595,9 +595,9 @@ input[type="email"],
 textarea {
   background-color: var(--color-white);
   border: none;
-  padding: 0.5rem;
   font-family: 'Figtree', sans-serif;
   font-size: var(--text-size-body);
+  padding: 0.5rem;
 }
 
 .footer {
@@ -605,13 +605,13 @@ textarea {
 }
 
 .footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   column-gap: 2rem;
-  row-gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-bottom: 4rem;
   padding-top: 4rem;
+  row-gap: 4rem;
 }
 
 @media (min-width: 868px) {
@@ -646,8 +646,8 @@ textarea {
 .footer-logo-title {
   color: var(--color-black);
   font-family: 'Fira Sans Extra Condensed', sans-serif;
-  font-weight: 300;
   font-size: clamp(1.5rem, 0.8182rem + 3.6364vw, 2.5rem);
+  font-weight: 300;
   letter-spacing: -0.5px;
 }
 
