@@ -27,10 +27,6 @@
   --text-size-xlarge: 4rem;
 }
 
-.hide {
-  display: none !important;
-}
-
 /* --- Global Styles --- */
 
 *, *::before, *::after {
@@ -651,7 +647,7 @@ textarea {
   color: var(--color-black);
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 300;
-  font-size: clamp(1.5rem, 0.8182rem + 3.6364vw, var(--text-size-xlarge));
+  font-size: clamp(1.5rem, 0.8182rem + 3.6364vw, 2.5rem);
   letter-spacing: -0.5px;
 }
 
