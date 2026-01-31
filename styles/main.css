@@ -161,18 +161,10 @@ p + .heading-tertiary,
 
 .list-bulleted-nested li {
   margin-top: 0.25rem;
-  line-height: 1.4;
 }
 
 .list-bulleted-nested li::marker {
   color: var(--color-grey-medium);
-}
-
-@media (min-width: 768px) {
-  .list-bulleted li li {
-    line-height: 1.5;
-    margin-inline-start: 1.5rem;
-  }
 }
 
 .list-bulleted + p {
@@ -663,7 +655,7 @@ textarea {
 }
 
 .footer-logo-subtitle {
-  color: var(--color-text-dark);
+  color: var(--color-text-primary);
   font-size: clamp(var(--text-size-small), 1vw + 0.5rem, var(--text-size-body));
   margin-top: 0.5rem;
 }
