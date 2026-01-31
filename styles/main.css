@@ -148,12 +148,23 @@ p + .heading-tertiary,
 	text-decoration-color: var(--color-pink-dark);
 }
 
-/* Nested list */
-.list-bulleted ul {
-  padding-left: 1.5rem;
+.list-bulleted li::marker {
+  color: var(--color-grey-medium);
 }
 
-.list-bulleted li::marker {
+.list-bulleted-nested {
+  margin-left: 1.25rem;
+  margin-top: 0.25rem;
+  padding-left: 0;
+  list-style-type: circle;
+}
+
+.list-bulleted-nested li {
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+.list-bulleted-nested li::marker {
   color: var(--color-grey-medium);
 }
 
@@ -652,7 +663,7 @@ textarea {
 }
 
 .footer-logo-subtitle {
-  color: var(--color-grey-dark);
+  color: var(--color-text-dark);
   font-size: clamp(var(--text-size-small), 1vw + 0.5rem, var(--text-size-body));
   margin-top: 0.5rem;
 }
